@@ -1,0 +1,32 @@
+[
+    {
+        "firstName": "Fernanda",
+        "lastName": "Tamara",
+        "adress": "Guaiba",
+        "emailAdress": "tamara@teste.com",
+        "radioGender": "n",
+        "checks": [
+            "Netflix",
+            "Dormir"
+        ],
+        "selectCountries": "Dinamarca",
+        "selectYears": "2001",
+        "selectMonths": "Abril",
+        "pwd": "Alunos@1908"
+    },
+    {
+        "firstName": "Tamara",
+        "lastName": "Aquino",
+        "adress": "Guaiba",
+        "emailAdress": "tamara@teste.com",
+        "radioGender": "F",
+        "checks": [
+            "Netflix",
+            "Dormir"
+        ],
+        "selectCountries": "Dinamarca",
+        "selectYears": "2001",
+        "selectMonths": "Abril",
+        "pwd": "Alunos@1908"
+    }
+]
