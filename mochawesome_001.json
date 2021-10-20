@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2021-10-20T10:32:47.582Z",
-    "end": "2021-10-20T10:32:50.715Z",
-    "duration": 3133,
+    "start": "2021-10-20T10:32:51.776Z",
+    "end": "2021-10-20T10:32:55.180Z",
+    "duration": 3404,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0969e2c9-52b6-4220-b46f-618089648c4d",
+      "uuid": "fbfc6c25-c28a-4173-bf65-eb0cd02c7aca",
       "title": "",
       "fullFile": "cypress/integration/listagem.spec.js",
       "file": "cypress/integration/listagem.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0da0cc2f-dc89-4ce4-aee6-9be28be50588",
+          "uuid": "02fcd08f-45e7-49d1-bf2c-9302a5746797",
           "title": "Listagem",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Quando não houver cadastros, então a listagem deve estar vazia",
               "fullTitle": "Listagem Quando não houver cadastros, então a listagem deve estar vazia",
               "timedOut": null,
-              "duration": 1013,
+              "duration": 1108,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.fixture('listagem-sem-itens').then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n}); //  window.localStorage.setItem('data',JSON.stringify([{\"firstName\":\"Fernanda\",\"lastName\":\"Tamara\",\"adress\":\"Guaiba\",\"emailAdress\":\"tamara@teste.com\",\"radioGender\":\"n\",\"checks\":[\"Netflix\",\"Dormir\"],\"selectCountries\":\"Dinamarca\",\"selectYears\":\"2001\",\"selectMonths\":\"Abril\",\"pwd\":\"Alunos@1908\"}]))\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length', 0); //",
               "err": {},
-              "uuid": "cdf10ab9-6c4e-4526-8db1-9bbe78d21082",
-              "parentUUID": "0da0cc2f-dc89-4ce4-aee6-9be28be50588",
+              "uuid": "8926aee5-acec-4bc1-92e9-febff0567e3c",
+              "parentUUID": "02fcd08f-45e7-49d1-bf2c-9302a5746797",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "quando houver um ou mais cadastros, então  a listagem deve exibir cada registro",
               "fullTitle": "Listagem quando houver um ou mais cadastros, então  a listagem deve exibir cada registro",
               "timedOut": null,
-              "duration": 462,
+              "duration": 486,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.fixture('listagem-com-itens').then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n}); //  window.localStorage.setItem('data',JSON.stringify([{\"firstName\":\"Fernanda\",\"lastName\":\"Tamara\",\"adress\":\"Guaiba\",\"emailAdress\":\"tamara@teste.com\",\"radioGender\":\"n\",\"checks\":[\"Netflix\",\"Dormir\"],\"selectCountries\":\"Dinamarca\",\"selectYears\":\"2001\",\"selectMonths\":\"Abril\",\"pwd\":\"Alunos@1908\"}]))\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length', 2);",
               "err": {},
-              "uuid": "fc9ed31a-4a0f-4ae2-be7d-dd583c5683ab",
-              "parentUUID": "0da0cc2f-dc89-4ce4-aee6-9be28be50588",
+              "uuid": "5aa89d4e-efca-416a-9c2b-560131a09c87",
+              "parentUUID": "02fcd08f-45e7-49d1-bf2c-9302a5746797",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cdf10ab9-6c4e-4526-8db1-9bbe78d21082",
-            "fc9ed31a-4a0f-4ae2-be7d-dd583c5683ab"
+            "8926aee5-acec-4bc1-92e9-febff0567e3c",
+            "5aa89d4e-efca-416a-9c2b-560131a09c87"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1475,
+          "duration": 1594,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
