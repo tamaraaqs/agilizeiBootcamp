@@ -1,0 +1,48 @@
+
+name: Testes
+#gatilhos
+  #Programados
+  #acionados por evento
+  
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  build:
+    
+    #maquina ou ambiente para executar tarefas
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    
+    #passos
+    steps:
+    #Download do codigo
+    - uses: actions/checkout@v2
+    
+    #setup da versão do node
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x 
+    
+    - run: npm install
+    - run: npm run cy:run
+      continue-on-error: true
+    - run: npm run report:merge
+    
+    #Github Pages -> publicar o relatorio
+    
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+       GITHUB_TOKEN: ${{ secrets.GITHUB.TOKEN}}
+       BRANCH: gh-pages
+       FOLDER: mochawesome-report
+      
+      
